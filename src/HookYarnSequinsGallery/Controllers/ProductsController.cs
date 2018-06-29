@@ -8,6 +8,9 @@ namespace HookYarnSequinsGallery.Controllers
 {
     public class ProductsController : Controller
     {
-
+        public string Detail()
+        {
+            return "Hello from the products controller!";
+        }
     }
 }
