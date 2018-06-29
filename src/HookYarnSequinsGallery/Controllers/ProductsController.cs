@@ -8,9 +8,14 @@ namespace HookYarnSequinsGallery.Controllers
 {
     public class ProductsController : Controller
     {
-        public string Detail()
+        public ActionResult Detail()
         {
-            return "Hello from the products controller!";
+            if (DateTime.Today.DayOfWeek == DayOfWeek.Monday)
+            {
+                return Redirect("/");
+            }
+
+            return Content("Hello from the products controller!");            
         }
     }
 }
