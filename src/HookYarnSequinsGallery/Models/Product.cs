@@ -27,7 +27,7 @@ namespace HookYarnSequinsGallery.Models
             get
             {
                 return SeriesTitle.Replace(" ", "-")
-                    .ToLower() + "-" + IssueNumber + ".jpg";
+                    .ToLower() + ".jpg";
             }
         }
     }
