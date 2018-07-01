@@ -4,16 +4,19 @@
     ViewBag.Title = "Products";
 }
 
-<h2>ViewBag.Title</h2>
+<h2>@ViewBag.Title</h2>
 
 <div class="row">
     @foreach (var product in Model)
     {
         <div class="col-md-3">
-            <h4>@product.DisplayText</h4>
-            <img src="/Images/@product.CoverImageFileName"
-                 alt="@product.DisplayText"
-                 class="img-responsive" />
+            <h4>@Html.ActionLink(product.DisplayText, "Detail",
+               new { id = product.Id})</h4>
+            <a href="@Url.Action("Detail", new { id = product.Id })">
+                <img src="/Images/@product.CoverImageFileName"
+                     alt="@product.DisplayText"
+                     class="img-responsive" />
+            </a>
         </div>
     }
 </div>
