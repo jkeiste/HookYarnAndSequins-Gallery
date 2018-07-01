@@ -17,6 +17,13 @@ namespace HookYarnSequinsGallery.Controllers
             _productRepository = new ProductRepository();
         }
 
+        public ActionResult Index()
+        {
+            var products = _productRepository.GetProducts();
+
+            return View(products);
+        }
+
         public ActionResult Detail(int? id)
         {
             if (id == null)

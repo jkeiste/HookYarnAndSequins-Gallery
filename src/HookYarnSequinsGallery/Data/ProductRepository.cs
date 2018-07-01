@@ -59,6 +59,11 @@ namespace HookYarnSequinsGallery.Data
             }
         };
 
+        public Product[] GetProducts()
+        {
+            return _products;
+        }
+
         public Product GetProduct(int id)
         {
             Product productToReturn = null;
