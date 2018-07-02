@@ -9,9 +9,9 @@ namespace HookYarnSequinsGallery.Models
     {
         public int Id { get; set; }
         public string ProductName { get; set; }
-        public int ItemNumber { get; set; }
+        public int Inventory { get; set; }
         public string DescriptionHtml { get; set; }
-        public bool Favorite { get; set; }
+        public bool PopularItem { get; set; }
 
         public string DisplayText
         {

@@ -12,6 +12,11 @@
     <div class="col-md-6">
         <div class="well">
             <h5><label><b>Name:</b></label> @Model.ProductName</h5>
+            <h5><label><b>In Stock:</b></label> @Model.Inventory</h5>
+            @if (Model.PopularItem)
+            {
+                <h5><label><b>Popular Item:</b></label> Get them while they last!</h5>
+            }            
             <h5><label><b>Description:</b></label> @Html.Raw(Model.DescriptionHtml)</h5>
         </div>
     </div>
