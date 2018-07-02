@@ -6,16 +6,14 @@
 }
 
 
-<h2>@Model.DisplayText</h2>
+<h2>Product Details</h2>
 
 <div class="row">
     <div class="col-md-6">
         <div class="well">
-            <h5><label>Series Title:</label> @Model.SeriesTitle</h5>
-            <h5><label>Issue #:</label> @Model.IssueNumber</h5>
+            <h5><label><b>Name:</b></label> @Model.ProductName</h5>
+            <h5><label><b>Description:</b></label> @Html.Raw(Model.DescriptionHtml)</h5>
         </div>
-        <h5>Description:</h5>
-        <div>@Html.Raw(Model.DescriptionHtml)</div>
     </div>
     <div class="col-md-6">
         <img src="/Images/@Model.CoverImageFileName"

@@ -8,17 +8,16 @@ namespace HookYarnSequinsGallery.Models
     public class Product
     {
         public int Id { get; set; }
-        public string SeriesTitle { get; set; }
-        public int IssueNumber { get; set; }
+        public string ProductName { get; set; }
+        public int ItemNumber { get; set; }
         public string DescriptionHtml { get; set; }
-        public Artist[] Artists { get; set; }
         public bool Favorite { get; set; }
 
         public string DisplayText
         {
             get
             {
-                return SeriesTitle + " #" + IssueNumber;
+                return ProductName;
             }
         }
 
@@ -26,7 +25,7 @@ namespace HookYarnSequinsGallery.Models
         {
             get
             {
-                return SeriesTitle.Replace(" ", "-")
+                return ProductName.Replace(" ", "-")
                     .ToLower() + ".jpg";
             }
         }
